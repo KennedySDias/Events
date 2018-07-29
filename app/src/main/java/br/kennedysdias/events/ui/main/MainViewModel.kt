@@ -2,8 +2,8 @@ package br.kennedysdias.events.ui.main
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
-import br.kennedysdias.data.Data
-import br.kennedysdias.data.EventModel
+import br.kennedysdias.appdata.Data
+import br.kennedysdias.appdata.EventModel
 
 class MainViewModel : ViewModel() {
 
@@ -11,7 +11,7 @@ class MainViewModel : ViewModel() {
 
 	fun getList() {
 		try {
-			listObservable.value = EventsListState.Success(Data.getEventList().toMutableList())
+			listObservable.value = EventsListState.Success(Data.eventList)
 		} catch (e: Exception) {
 			listObservable.value = EventsListState.Error("Could not process data")
 		}

@@ -13,7 +13,8 @@
 		android:layout_width="match_parent"
 		android:layout_height="200dp"
 		android:background="@color/placeholderImage"
-		android:scaleType="centerCrop"
+		android:scaleType="center"
+		android:transitionName="@string/id_imageViewBackground"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +41,9 @@
 		android:maxLines="2"
 		android:textAllCaps="true"
 		android:textColor="@android:color/white"
-		android:textSize="24sp"
+		android:textSize="32sp"
+		android:textStyle="bold"
+		android:transitionName="@string/id_textViewName"
 		app:layout_constraintBottom_toBottomOf="@+id/imageViewBackground"
 		tools:text="@string/events" />
 
@@ -53,7 +56,8 @@
 		android:ellipsize="end"
 		android:maxLines="1"
 		android:textColor="@android:color/white"
-		android:textSize="16sp"
+		android:textSize="18sp"
+		android:transitionName="@string/id_textViewCategory"
 		app:layout_constraintBottom_toTopOf="@+id/textViewName"
 		tools:text="@string/events" />
 

@@ -1,9 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:background="@android:color/black"
 	tools:context=".ui.detail.DetailActivity">
+
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:elevation="6dp"
+		app:navigationIcon="@drawable/ic_arrow_back_white" />
+
+	<ImageView
+		android:id="@+id/imageViewBackground"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scaleType="centerCrop"
+		android:transitionName="@string/id_imageViewBackground"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="ContentDescription" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@drawable/filter_image"
+		app:layout_constraintBottom_toBottomOf="@+id/imageViewBackground"
+		app:layout_constraintEnd_toEndOf="@+id/imageViewBackground"
+		app:layout_constraintStart_toStartOf="@+id/imageViewBackground"
+		app:layout_constraintTop_toTopOf="@+id/imageViewBackground" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="24dp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<TextView
+			android:id="@+id/textViewCategory"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:maxLines="1"
+			android:textColor="@android:color/white"
+			android:textSize="18sp"
+			android:transitionName="@string/id_textViewCategory"
+			tools:text="@string/events" />
+
+		<TextView
+			android:id="@+id/textViewName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:ellipsize="end"
+			android:maxLines="3"
+			android:textAllCaps="true"
+			android:textColor="@android:color/white"
+			android:textSize="32sp"
+			android:textStyle="bold"
+			android:transitionName="@string/id_textViewName"
+			tools:text="@string/events" />
+
+		<TextView
+			android:id="@+id/textViewDate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="16dp"
+			android:drawablePadding="8dp"
+			android:drawableStart="@drawable/ic_access_time"
+			android:drawableTint="@android:color/white"
+			android:ellipsize="end"
+			android:maxLines="3"
+			android:textColor="@android:color/white"
+			android:textSize="16sp"
+			tools:text="@string/events" />
+
+		<TextView
+			android:id="@+id/textViewAddress"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:drawablePadding="8dp"
+			android:drawableStart="@drawable/ic_location_on"
+			android:drawableTint="@android:color/white"
+			android:ellipsize="end"
+			android:maxLines="3"
+			android:textColor="@android:color/white"
+			android:textSize="16sp"
+			tools:text="@string/events" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="150dp"
+		android:gravity="center"
+		android:weightSum="10"
+		app:layout_constraintBottom_toBottomOf="parent">
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab01"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="8dp"
+			android:layout_weight="2"
+			android:alpha="0"
+			tools:alpha="1" />
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab02"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="8dp"
+			android:layout_weight="2"
+			android:alpha="0"
+			tools:alpha="1" />
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab03"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="8dp"
+			android:layout_weight="2"
+			android:alpha="0"
+			tools:alpha="1" />
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab04"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="8dp"
+			android:layout_weight="2"
+			android:alpha="0"
+			tools:alpha="1" />
+
+		<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab05"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_margin="8dp"
+			android:layout_weight="2"
+			android:alpha="0"
+			tools:alpha="1" />
+
+	</LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

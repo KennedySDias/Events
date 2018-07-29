@@ -3,4 +3,7 @@
 	<string name="events">Events</string>
 	<string name="filter">Filter</string>
 	<string name="title_activity_detail">DetailActivity</string>
+	<string name="id_imageViewBackground">imageViewBackground</string>
+	<string name="id_textViewName">textViewName</string>
+	<string name="id_textViewCategory">textViewCategory</string>
 </resources>
