@@ -8,6 +8,7 @@ import android.view.Menu
 import br.kennedysdias.data.EventModel
 import br.kennedysdias.events.R
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.toast
 import org.koin.android.architecture.ext.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 		configureToolbar()
 		configureRecyclerView()
+		configureFab()
 		configureObservables()
 
 		viewModel.getList()
@@ -41,6 +43,12 @@ class MainActivity : AppCompatActivity() {
 		recyclerViewEvents.apply {
 			layoutManager = LinearLayoutManager(context)
 			adapter = eventsListAdapter
+		}
+	}
+
+	private fun configureFab() {
+		floatingActionButton.setOnClickListener {
+			toast("FAB clicked")
 		}
 	}
 
