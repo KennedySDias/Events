@@ -9,7 +9,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.widget.ImageView
 import android.widget.TextView
-import br.kennedysdias.data.EventModel
+import br.kennedysdias.appdata.EventModel
 import br.kennedysdias.events.R
 import br.kennedysdias.events.ui.detail.DetailActivity
 import br.kennedysdias.events.ui.detail.EXTRA_EVENT_MODEL
@@ -90,9 +90,9 @@ class MainActivity : AppCompatActivity() {
 			textViewCategory: TextView) {
 
 		val options = ActivityOptions.makeSceneTransitionAnimation(this,
-				UtilPair.create(imageViewBackground, "imageViewBackground"),
-				UtilPair.create(textViewName, "textViewName"),
-				UtilPair.create(textViewCategory, "textViewCategory"))
+				UtilPair.create(imageViewBackground, getString(R.string.id_imageViewBackground)),
+				UtilPair.create(textViewName, getString(R.string.id_textViewName)),
+				UtilPair.create(textViewCategory, getString(R.string.id_textViewCategory)))
 
 		val newIntent = Intent(this, DetailActivity::class.java)
 		newIntent.putExtra(EXTRA_EVENT_MODEL, eventModel)
