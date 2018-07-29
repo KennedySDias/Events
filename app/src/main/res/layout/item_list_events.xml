@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<ImageView
+		android:id="@+id/imageViewBackground"
+		android:layout_width="match_parent"
+		android:layout_height="200dp"
+		android:background="@color/placeholderImage"
+		android:scaleType="centerCrop"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="ContentDescription" />
+
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="@drawable/filter_image"
+		app:layout_constraintBottom_toBottomOf="@+id/imageViewBackground"
+		app:layout_constraintEnd_toEndOf="@+id/imageViewBackground"
+		app:layout_constraintStart_toStartOf="@+id/imageViewBackground"
+		app:layout_constraintTop_toTopOf="@+id/imageViewBackground" />
+
+	<TextView
+		android:id="@+id/textViewName"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:ellipsize="end"
+		android:maxLines="2"
+		android:textAllCaps="true"
+		android:textColor="@android:color/white"
+		android:textSize="24sp"
+		app:layout_constraintBottom_toBottomOf="@+id/imageViewBackground"
+		tools:text="@string/events" />
+
+	<TextView
+		android:id="@+id/textViewCategory"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:layout_marginStart="16dp"
+		android:ellipsize="end"
+		android:maxLines="1"
+		android:textColor="@android:color/white"
+		android:textSize="16sp"
+		app:layout_constraintBottom_toTopOf="@+id/textViewName"
+		tools:text="@string/events" />
+
+</android.support.constraint.ConstraintLayout>
