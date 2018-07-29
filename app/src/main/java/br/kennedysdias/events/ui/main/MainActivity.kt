@@ -1,15 +1,22 @@
 package br.kennedysdias.events.ui.main
 
+import android.app.ActivityOptions
 import android.arch.lifecycle.Observer
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
+import android.widget.ImageView
+import android.widget.TextView
 import br.kennedysdias.data.EventModel
 import br.kennedysdias.events.R
+import br.kennedysdias.events.ui.detail.DetailActivity
+import br.kennedysdias.events.ui.detail.EXTRA_EVENT_MODEL
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 import org.koin.android.architecture.ext.viewModel
+import android.util.Pair as UtilPair
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 	}
 
 	private fun configureRecyclerView() {
-		eventsListAdapter = EventsListAdapter(mutableListOf())
+		eventsListAdapter = EventsListAdapter(mutableListOf(), ::openDetail)
 		recyclerViewEvents.apply {
 			layoutManager = LinearLayoutManager(context)
 			adapter = eventsListAdapter
@@ -74,6 +81,22 @@ class MainActivity : AppCompatActivity() {
 			it.list.addAll(list)
 			it.notifyDataSetChanged()
 		}
+	}
+
+	private fun openDetail(
+			eventModel: EventModel,
+			imageViewBackground: ImageView,
+			textViewName: TextView,
+			textViewCategory: TextView) {
+
+		val options = ActivityOptions.makeSceneTransitionAnimation(this,
+				UtilPair.create(imageViewBackground, "imageViewBackground"),
+				UtilPair.create(textViewName, "textViewName"),
+				UtilPair.create(textViewCategory, "textViewCategory"))
+
+		val newIntent = Intent(this, DetailActivity::class.java)
+		newIntent.putExtra(EXTRA_EVENT_MODEL, eventModel)
+		startActivity(newIntent, options.toBundle())
 	}
 
 }
