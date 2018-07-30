@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.item_list_events.view.*
 
 class EventsListAdapter(
 		val list: MutableList<EventModel>,
-		private val onClickItem: (EventModel, ImageView, TextView, TextView) -> Unit
+		private val onClickItem: (EventModel, ImageView, TextView, TextView, View) -> Unit
 ) : RecyclerView.Adapter<ViewHolder>() {
 
 	override fun onCreateViewHolder(viewGroup: ViewGroup, item: Int) =
@@ -35,7 +35,7 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
 	fun bind(
 			item: EventModel,
-			onClickItem: (EventModel, ImageView, TextView, TextView) -> Unit
+			onClickItem: (EventModel, ImageView, TextView, TextView, View) -> Unit
 	) = with(itemView) {
 
 		Glide
@@ -47,7 +47,7 @@ class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		textViewCategory.text = item.category
 
 		layoutParent.setOnClickListener {
-			onClickItem(item, imageViewBackground, textViewName, textViewCategory)
+			onClickItem(item, imageViewBackground, textViewName, textViewCategory, viewGradient)
 		}
 	}
 

@@ -66,6 +66,21 @@ class DetailActivity : AppCompatActivity() {
 
 	private fun startAnimations() {
 		showButtons()
+		showTexts()
+	}
+
+	private fun showTexts() {
+		textViewDate.animate()
+				.setStartDelay(400)
+				.alpha(1f)
+				.setDuration(400L)
+				.start()
+
+		textViewAddress.animate()
+				.setStartDelay(400)
+				.alpha(1f)
+				.setDuration(400L)
+				.start()
 	}
 
 	private fun showButtons() {
