@@ -3,7 +3,7 @@ Is a app developed to practice my skills in development of layout and animations
 
 # Demo
 Just to demonstrate app all data is fake.<br/><br/>
-<img src="images/gif-events-app.gif" width="350" border="1px">
+<img src="images/gif-events-app.gif" width="350">
 
 # References
 <a href="https://br.pinterest.com/pin/779052435515441662/">
