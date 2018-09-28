@@ -1,5 +1,5 @@
 # Events
-Is a app developed to practice my skills in development of layout and animations.
+App developed to practice my skills in development of layout and animations.
 
 # Demo
 <img src="images/gif-events-app.gif" width="350">
