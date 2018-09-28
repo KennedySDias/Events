@@ -1,8 +1,7 @@
 # Events
-Is a app developed to practice my skills in development of layout and animations. The layout was inspired in a image finded in Pinterest. You can confirm in references section.
+Is a app developed to practice my skills in development of layout and animations.
 
 # Demo
-Just to demonstrate app all data is fake.<br/><br/>
 <img src="images/gif-events-app.gif" width="350">
 
 # References
